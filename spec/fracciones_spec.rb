@@ -19,4 +19,14 @@ describe Fraccion do
         @num.denominador.should eq(4)
      end
   end
+
+
+ describe " # Forma reducida" do
+     it "Debe estar en su forma reducida" do
+       num2 = @num.reduccion
+       num2.numerador.should eq(1)
+       num2.denominador.should eq(2)
+     end
+  end
+
 end
