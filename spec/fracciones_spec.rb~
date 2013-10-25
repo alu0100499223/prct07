@@ -1,0 +1,7 @@
+require "lib/fracciones.rb"
+
+describe Fraccion do
+  before :each do
+    @num = Fraccion.new(2,4)
+  end 
+end
