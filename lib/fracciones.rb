@@ -40,5 +40,10 @@ attr_reader :numerador, :denominador
      f
    end
 
+    def -@
+     f = Fraccion.new(-@numerador, @denominador)
+     f
+   end
+
 end
 

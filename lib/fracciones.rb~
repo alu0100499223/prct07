@@ -27,5 +27,18 @@ attr_reader :numerador, :denominador
           false
       end
    end
+
+    def abs
+     numerador1 = @numerador.abs
+     denominador1 = @denominador.abs
+     f = Fraccion.new(numerador1, denominador1)
+     f 
+   end
+
+   def reciprocal
+     f = Fraccion.new(@denominador, @numerador)
+     f
+   end
+
 end
 
