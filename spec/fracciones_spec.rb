@@ -105,4 +105,26 @@ describe Fraccion do
      end
   end
 
+    describe "Comparaciones" do
+     it "Se debe de poder comprobar si una fracion es menor que otra" do
+       #  f1 = Fraccion.new(1,4)
+        (@num < Fraccion.new(1,4)).should == false
+     end
+
+     it "Se debe de poder comprobar si una fracion es mayor que otra" do
+        f1 = Fraccion.new(1,4)
+        (@num > f1).should == true
+     end
+     it "Se debe de poder comprobar si una fracion es menor o igual que otra" do
+        f1 = Fraccion.new(1,4)
+        (@num <= f1).should == false
+     end
+     it "Se debe de poder comprobar si una fracion es mayor o igual que otra" do
+        f1 = Fraccion.new(1,4)
+        (@num >= f1).should == true
+
+     end
+  end
+
+
 end
