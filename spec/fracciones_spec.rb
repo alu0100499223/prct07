@@ -29,4 +29,14 @@ describe Fraccion do
      end
   end
 
+  describe " Mostrar" do
+     it " Se debe mostrar por la consola la fraccion de la forma: a/b" do
+        @num.to_s.should eq("2/4")
+     end
+       
+     it " Se debe mostrar por la consola la fraccion en formato flotante" do
+        @num.to_f.should eq(0.5)
+     end
+  end
+
 end
