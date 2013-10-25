@@ -39,4 +39,13 @@ describe Fraccion do
      end
   end
 
+  describe " Comparar" do
+     it " Se debe comparar si dos fracciones son iguales con ==" do
+        num1 = Fraccion.new(1,2)
+        (@num == num1).should eq(true) 
+
+     end
+  end
+
+
 end
