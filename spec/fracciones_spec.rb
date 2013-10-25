@@ -72,6 +72,37 @@ describe Fraccion do
      end
   end
 
-
+  describe " Operaciones" do
+     it " Suma" do
+      f1 = Fraccion.new(6,8)
+      f1 = @num + f1
+      f1.numerador.should eq(5)
+      f1.denominador.should eq(4)
+     end
+     it " Resta" do
+      f1 = Fraccion.new(2,8)
+      f1 = @num - f1
+      f1.numerador.should eq(1)
+      f1.denominador.should eq(4)
+  
+     end
+     it " Multiplicacion" do
+       f1 = Fraccion.new(6,8)
+       f1 = @num * f1
+       f1.numerador.should eq(3)
+       f1.denominador.should eq(8)
+     end
+  
+     it " Division" do
+       f1 = Fraccion.new(6,8)
+       f1 = @num.div(f1)
+       f1.numerador.should eq(2)
+       f1.denominador.should eq(3)
+     end
+     it " Resto" do
+       f1 = Fraccion.new(2,4)
+       (@num % f1).should == 0
+     end
+  end
 
 end
