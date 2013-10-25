@@ -17,5 +17,15 @@ attr_reader :numerador, :denominador
    def to_f
      (@numerador/@denominador.to_f)
    end
+
+      def ==(other)
+      num = reduccion
+      num1 = other.reduccion
+      if ((num.numerador == other.numerador) && (num.denominador == other.denominador))
+          true
+      else
+          false
+      end
+   end
 end
 
