@@ -64,6 +64,14 @@ describe Fraccion do
      end
   end
 
+  describe " Opuesto" do
+     it "Se debe calcular el opuesto de una fraccion con -" do
+        num1 = -@num
+        num1.numerador.should eq(-2)
+        num1.denominador.should eq(4)
+     end
+  end
+
 
 
 end

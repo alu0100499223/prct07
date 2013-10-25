@@ -47,5 +47,23 @@ describe Fraccion do
      end
   end
 
+  describe " Valor absoluto" do
+     it " Se debe calcular el valor absoluto de una fraccion con el metodo abs" do
+         num1 = Fraccion.new(-2,4)
+         num1 = num1.abs
+         num1.numerador.should eq(2)
+         num1.denominador.should eq(4)
+     end
+  end
+
+  describe " Reciproco" do
+     it " Se debe calcular el reciproco de una fraccion con el metodo reciprocal" do
+        num1 = @num.reciprocal
+        num1.numerador.should eq(4)
+        num1.denominador.should eq(2)
+     end
+  end
+
+
 
 end
