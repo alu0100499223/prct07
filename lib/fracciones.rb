@@ -40,9 +40,44 @@ attr_reader :numerador, :denominador
      f
    end
 
-    def -@
+   def -@
      f = Fraccion.new(-@numerador, @denominador)
      f
+   end
+   
+   def +(other)
+    den = @denominador * other.denominador
+    num = ((den/@denominador)*@numerador) + ((den/other.denominador)*other.numerador)
+    gcd = gcd(num, den)
+    sum = Fraccion.new(num/gcd, den/gcd)
+    sum
+   end
+   def -(other)
+    den = @denominador * other.denominador
+    num = ((den/@denominador)*@numerador) -  ((den/other.denominador)*other.numerador)
+    gcd = gcd(num, den)
+    sum = Fraccion.new(num/gcd, den/gcd)
+    sum
+
+   end
+   def *(other)
+    num = @numerador * other.numerador
+    den = @denominador * other.denominador
+    gcd = gcd(num, den)
+    sum = Fraccion.new(num/gcd, den/gcd)
+    sum
+
+   end
+   def div(other)
+    num = @numerador * other.denominador
+    den = @denominador * other.numerador
+    gcd = gcd(num, den)    
+    sum = Fraccion.new(num/gcd, den/gcd)
+    sum
+   end
+   def %(other)
+    to_f % other.to_f
+    
    end
 
 end
