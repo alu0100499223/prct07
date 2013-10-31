@@ -83,7 +83,7 @@ attr_reader :numerador, :denominador
    
    
    def<=>(other)
-    self.numerador.to_f / self.denominador.to_f
+    (self.numerador.to_f / self.denominador.to_f) <=> (other.numerador.to_f / other.denominador.to_f)
    end
   
 

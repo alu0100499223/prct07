@@ -1,6 +1,6 @@
 require "gcd.rb"
 class Fraccion
-include Comparable
+
 attr_reader :numerador, :denominador
    def initialize(numerador, denominador)
      @numerador, @denominador = numerador, denominador
