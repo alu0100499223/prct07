@@ -1,5 +1,6 @@
 require "gcd.rb"
 class Fraccion
+include Comparable
 attr_reader :numerador, :denominador
    def initialize(numerador, denominador)
      @numerador, @denominador = numerador, denominador
@@ -80,42 +81,9 @@ attr_reader :numerador, :denominador
     
    end
    
-   def >(other)
-    f1 = @numerador.to_f / @denominador.to_f
-    f2 = other.numerador.to_f / other.denominador.to_f
-    if (f1 > f2)
-       return true
-    end
-    false
-   end
-   def <(other)
-    f1 = @numerador.to_f / @denominador.to_f
-    f2 = other.numerador.to_f / other.denominador.to_f
-    if (f1 < f2)
-       return true
-    end
-    false
-
-   end
-   def <=(other)
-    f1 = @numerador.to_f / @denominador.to_f
-    f2 = other.numerador.to_f / other.denominador.to_f
-    if (f1 <= f2)
-       return true
-    end
-    false
-
-   end
-   def >=(other)
-    f1 = @numerador.to_f / @denominador.to_f
-    f2 = other.numerador.to_f / other.denominador.to_f
-    if (f1 >= f2)
-       return true
-    end
-    false
-   end 
+   
    def<=>(other)
-    self.numerador.to_f / self.denominador.to_f
+    (self.numerador.to_f / self.denominador.to_f) <=> (other.numerador.to_f / other.denominador.to_f)
    end
   
 
