@@ -79,6 +79,45 @@ attr_reader :numerador, :denominador
     to_f % other.to_f
     
    end
+   
+   def >(other)
+    f1 = @numerador.to_f / @denominador.to_f
+    f2 = other.numerador.to_f / other.denominador.to_f
+    if (f1 > f2)
+       return true
+    end
+    false
+   end
+   def <(other)
+    f1 = @numerador.to_f / @denominador.to_f
+    f2 = other.numerador.to_f / other.denominador.to_f
+    if (f1 < f2)
+       return true
+    end
+    false
+
+   end
+   def <=(other)
+    f1 = @numerador.to_f / @denominador.to_f
+    f2 = other.numerador.to_f / other.denominador.to_f
+    if (f1 <= f2)
+       return true
+    end
+    false
+
+   end
+   def >=(other)
+    f1 = @numerador.to_f / @denominador.to_f
+    f2 = other.numerador.to_f / other.denominador.to_f
+    if (f1 >= f2)
+       return true
+    end
+    false
+   end 
+   def<=>(other)
+    self.numerador.to_f / self.denominador.to_f
+   end
+  
 
 end
 
